@@ -14,12 +14,13 @@ CONSTRUCT {
    dbp:location ?Localisation;
    dbp:service ?Service;
    dbp:commune ?Commune;
-    
    dbp:country ?Pays;
    dbp:address ?Adresse;
    dbp:regionCode ?Coderégion;		    		
    dbp:Département ?Département;
    dbp:locality ?Localité;
+   dbp:localion ?urbaine;
+   dbp:region ?uri_region;        
    dbp:countryCode ?codepays;
    dbp:postbox ?Boitepostale;
    dbp:departmentCode ?Codedepartement;
