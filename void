@@ -1,0 +1,33 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+
+
+:cpr                a                        void:Dataset;
+                    dcterms:title            "Implantations des établissements d'enseignement supérieur publics";
+                    dcterms:description      "Ce jeu de données présente la localisation des implantations des établissements d'enseignement supérieur publics : universités, université de technologie, INP, grands établissements, écoles d'ingénieur.";
+                    void:vocabulary          <http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#>
+                    foaf:homepage            <https://www.etalab.gouv.fr>;
+                    dcterms:contributor      "Direction de l'évaluation, de la prospective et de la performance";
+                    dcterms:publisher        :ALNAJM_Yamen;
+                    dcterms:publisher        :BELHADJ_KACEM_Soufyane;
+                    dcterms:created          "2017-01-11"^^xsd:date ;
+                    dcterms:license          <https://www.etalab.gouv.fr/wp-content/uploads/2014/05/Licence_Ouverte.pdf> ;
+                    void:feature             <http://www.w3.org/ns/formats/Turtle>;
+                    void:triples             939.
+
+
+:BELHADJ_KACEM_Soufyane    a                        foaf:Person;
+                    rdfs:label               "BELHADJ KACEM Soufyane";
+                    foaf:mbox                <sofiane_belhadj_kacem@outlook.fr>.
+
+:ALNAJM_Yamen      a                        foaf:Person;
+                    rdfs:label               "ALNAJM Yamen";
+                    foaf:mbox                <yamenhome@gmail.com>.
+
+
+:cpr                a                        void:Linkset ;
+                    void:target              datas_clement;
+                    void:linkedPredicate owl:sameAs.
