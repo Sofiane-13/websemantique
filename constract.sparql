@@ -1,0 +1,64 @@
+ PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+ PREFIX schema:  <http://schema.org/>
+ PREFIX clvapit: <http://dati.gov.it/onto/clvapit#>
+ PREFIX owl: <http://www.w3.org/2002/07/owl#>
+ PREFIX dbo: <http://dbpedia.org/ontology/>
+ PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ PREFIX org: <http://www.enseignementsup-recherche.gouv.fr/resource#> 
+
+CONSTRUCT {
+
+  ?URI_Code a dbo:code;
+   dbp:location ?Localisation;
+   dbp:service ?Service;
+   dbp:commune ?Commune;
+    
+   dbp:country ?Pays;
+   dbp:address ?Adresse;
+   dbp:regionCode ?Coderégion;		    		
+   dbp:Département ?Département;
+   dbp:locality ?Localité;
+   dbp:countryCode ?codepays;
+   dbp:postbox ?Boitepostale;
+   dbp:departmentCode ?Codedepartement;
+   dbp:date ?Datedouverture;
+   dbp:effective ?Effectifdétudiantsinscrits;
+   dbp:type ?Type;
+    
+   org:Codeimplantationuniversite   ?Codedelétablissementsiége;
+   org:Hasgeolocalisation ?Géolocalisation;
+   org:hascodecommune ?Codecommune;
+   org:hascodeuniteurbain ?Unitéurbaine.
+  
+   ?uri_region a dbp:region;
+   dbp:regionCode ?Coderégion;
+   foaf:name ?Région;
+   owl:sameAs ?DBP_Region.  
+ 
+
+   ?urbaine a dbp:Location;
+   owl:sameAs ?DBP_urbain.
+
+ 
+   
+
+} 
+FROM <file:m.csv> 
+WHERE {
+  BIND (URI(CONCAT('http://www.enseignementsup-recherche.gouv.fr/resource#', ?Codedelimplantation)) AS ?URI_Code)
+  BIND (xsd:integer(?Codenature) AS ?codenature)
+  BIND (xsd:integer(?Codepays) AS ?codepays)
+
+  BIND (URI(CONCAT('http://www.enseignementsup-recherche.gouv.fr/resource#', ?Région)) AS ?uri_region)
+  BIND (URI(CONCAT('http://fr.dbpedia.org/page/', ?Région)) AS ?DBP_Region)
+
+  BIND (URI(CONCAT('http://www.enseignementsup-recherche.gouv.fr/resource#', ?Boitepostale)) AS ?postalbox)
+  BIND (URI(CONCAT('http://fr.dbpedia.org/page/', ?Boitepostale)) AS ?DBP_postal)
+
+  BIND (URI(CONCAT('http://www.enseignementsup-recherche.gouv.fr/resource#', ?Unitéurbaine)) AS ?urbaine)
+  BIND (URI(CONCAT('http://fr.dbpedia.org/page/', ?Unitéurbaine)) AS ?DBP_urbain)
+
+  
+}
