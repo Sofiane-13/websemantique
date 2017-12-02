@@ -1,0 +1,12 @@
+SELECT ?a ?Pays ?Adresse ?uri_region ?urbaine ?codepays
+WHERE {
+ ?a dbp:country ?Pays;
+    dbp:address ?Adresse;
+   dbp:region ?uri_region;
+   dbp:location ?urbaine;
+   dbp:countryCode ?codepays;
+
+}
+
+
+--------------------------------------------------------------------------------------------
