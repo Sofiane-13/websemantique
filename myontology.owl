@@ -1,0 +1,421 @@
+@prefix : <http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5> .
+
+<http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Hasgeolocalisation
+
+:Hasgeolocalisation rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:range :Géolocalisation ;
+                    
+                    rdfs:domain :region .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#city
+
+:city rdf:type owl:ObjectProperty ;
+      
+      rdfs:range :city ;
+      
+      rdfs:domain :organisation .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#commune
+
+:commune rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :organisation ;
+         
+         rdfs:range :settlement .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#country
+
+:country rdf:type owl:ObjectProperty ;
+         
+         rdfs:range :country ;
+         
+         rdfs:domain :organisation .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#countryCode
+
+:countryCode rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :organisation ;
+             
+             rdfs:range owl:Thing .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#departement
+
+:departement rdf:type owl:ObjectProperty ;
+             
+             rdfs:domain :organisation ;
+             
+             rdfs:range :populatedplace .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#hascodecommune
+
+:hascodecommune rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :codecommune ;
+                
+                rdfs:domain :commune .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#hascodeuniteurbain
+
+:hascodeuniteurbain rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:range :codeuniteurbain ;
+                    
+                    rdfs:domain :place .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#location
+
+:location rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain :organisation ;
+          
+          rdfs:range :place .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#postbox
+
+:postbox rdf:type owl:ObjectProperty ;
+         
+         rdfs:domain :organisation ;
+         
+         rdfs:range owl:Thing .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#region
+
+:region rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :organisation ;
+        
+        rdfs:range :place .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#regionCode
+
+:regionCode rdf:type owl:ObjectProperty ;
+            
+            rdfs:domain :organisation ;
+            
+            rdfs:range owl:Thing .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#services
+
+:services rdf:type owl:ObjectProperty ;
+          
+          rdfs:domain owl:Thing .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#type
+
+:type rdf:type owl:ObjectProperty ;
+      
+      rdfs:domain :organisation ;
+      
+      rdfs:range owl:Thing .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Codeimplantationuniversite
+
+:Codeimplantationuniversite rdf:type owl:DatatypeProperty ;
+                            
+                            rdfs:domain :universite ;
+                            
+                            rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#adresse
+
+:adresse rdf:type owl:DatatypeProperty ;
+         
+         rdfs:domain :organisation ;
+         
+         rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#date
+
+:date rdf:type owl:DatatypeProperty ;
+      
+      rdfs:domain :organisation ;
+      
+      rdfs:range xsd:dateTime .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#departementCode
+
+:departementCode rdf:type owl:DatatypeProperty ;
+                 
+                 rdfs:domain :organisation ;
+                 
+                 rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#id
+
+:id rdf:type owl:DatatypeProperty ;
+    
+    rdfs:domain :organisation ;
+    
+    rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#locality
+
+:locality rdf:type owl:DatatypeProperty ;
+          
+          rdfs:domain :organisation ;
+          
+          rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#localization
+
+:localization rdf:type owl:DatatypeProperty ;
+              
+              rdfs:domain :organisation ;
+              
+              rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#postalCode
+
+:postalCode rdf:type owl:DatatypeProperty ;
+            
+            rdfs:domain :organisation ;
+            
+            rdfs:range xsd:string .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Codedelimplantation
+
+:Codedelimplantation rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Codedelunitéderattachement
+
+:Codedelunitéderattachement rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Codedelétablissementsiège
+
+:Codedelétablissementsiège rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Codedepartement
+
+:Codedepartement rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Company
+
+:Company rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Datedouverture
+
+:Datedouverture rdf:type owl:Class ;
+                
+                rdfs:subClassOf :date .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Département
+
+:Département rdf:type owl:Class ;
+             
+             rdfs:subClassOf :region .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Effectifdétudiantsinscrits
+
+:Effectifdétudiantsinscrits rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Géolocalisation
+
+:Géolocalisation rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Implantation
+
+:Implantation rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Unitéderattachement
+
+:Unitéderattachement rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#Unitéurbaine
+
+:Unitéurbaine rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#city
+
+:city rdf:type owl:Class ;
+      
+      rdfs:subClassOf :region .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#codecommune
+
+:codecommune rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#codeuniteurbain
+
+:codeuniteurbain rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#commune
+
+:commune rdf:type owl:Class ;
+         
+         rdfs:subClassOf :region .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#country
+
+:country rdf:type owl:Class ;
+         
+         rdfs:subClassOf :region .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#date
+
+:date rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#organisation
+
+:organisation rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#place
+
+:place rdf:type owl:Class ;
+       
+       rdfs:subClassOf :region .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#populatedplace
+
+:populatedplace rdf:type owl:Class ;
+                
+                rdfs:subClassOf :region .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#region
+
+:region rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#settlement
+
+:settlement rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#typedelétablissementsiège
+
+:typedelétablissementsiège rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#universite
+
+:universite rdf:type owl:Class .
+
+
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+
