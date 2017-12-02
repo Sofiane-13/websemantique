@@ -1,6 +1,5 @@
 # websemantique
-# Rapport : 
-https://docs.google.com/document/d/18qpsG4oENE7_yCpyoZqH6vusRj4uWWhT0xg3tnHUxow/edit?usp=sharing
+ Rapport : https://docs.google.com/document/d/18qpsG4oENE7_yCpyoZqH6vusRj4uWWhT0xg3tnHUxow/edit?usp=sharing
 
 Données brute : https://github.com/Sofiane-13/websemantique/blob/master/implantationsetablissements.csv
 
