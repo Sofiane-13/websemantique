@@ -1,4 +1,5 @@
 # websemantique
+
  Rapport : https://docs.google.com/document/d/18qpsG4oENE7_yCpyoZqH6vusRj4uWWhT0xg3tnHUxow/edit?usp=sharing
 
 Données brute : https://github.com/Sofiane-13/websemantique/blob/master/implantationsetablissements.csv
@@ -10,3 +11,7 @@ Notre ontologie : https://github.com/Sofiane-13/websemantique/blob/master/myonto
 Le void : https://github.com/Sofiane-13/websemantique/blob/master/void
 
 Datahub : https://datahub.io/Sofiane-13/impl4-dry-ladybug-32#resource-impl4
+
+Requêtes : https://github.com/Sofiane-13/websemantique/tree/master/query
+
+federated query : https://github.com/Sofiane-13/websemantique/tree/master/Federated-query
