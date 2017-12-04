@@ -1,0 +1,20 @@
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+ PREFIX schema:  <http://schema.org/>
+ PREFIX clvapit: <http://dati.gov.it/onto/clvapit#>
+ PREFIX owl: <http://www.w3.org/2002/07/owl#>
+ PREFIX dbo: <http://dbpedia.org/ontology/>
+ PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ PREFIX ex: <http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#> 
+ PREFIX src:<http://www.enseignementsup-recherche.gouv.fr/resource/>
+ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+ PREFIX : <undefined>
+prefix igeo:  <http://rdf.insee.fr/def/geo#> 
+SELECT DISTINCT  ?region (Count(?a) AS ?numberDeEtablissment) 
+WHERE {
+  ?a dbp:region ?region.
+ 
+}
+GROUP BY ?region
+LIMIT 800

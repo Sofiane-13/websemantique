@@ -1,0 +1,13 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ PREFIX ex: <http://www.semanticweb.org/sofiane/ontologies/2017/10/untitled-ontology-5#> 
+ PREFIX src:<http://www.enseignementsup-recherche.gouv.fr/resource/>
+ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+ PREFIX : <undefined>
+prefix igeo:  <http://rdf.insee.fr/def/geo#> 
+SELECT DISTINCT  ?city (Count(?a) AS ?numberDeEtablissment) 
+WHERE {
+  ?a dbp:Département ?city.
+ 
+}
+GROUP BY ?city
+order by Desc (?numberDeEtablissment)
